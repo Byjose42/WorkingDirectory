@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/principal.css">
+  <link rel="stylesheet" href="estilos/carrusel.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header id="cabeceralogo">
+    <div>
+      <h1>Jose Antonio Martín-Maestro Piñeiro</h1>
+    </div>
+  </header>
+  <nav id="menuprincipal">
+    <div>
+      <ul id="listamenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="recetas.html">Recetas</a>
+          <ul>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="ReceitaDoDía.html">Receita do día</a></li>
+          </ul>
+        </li>
+        <li><a href="Paginas.html">Paginas de Referencia</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div>
+      <aside id="Infoadicional">
+
+
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 7</div>
+            <img src="img/atun a la plancha.jpg" style="width:100%">
+            <div class="text">Atun a la plancha</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 7</div>
+            <img src="img/Paella.jpg" style="width:100%">
+            <div class="text">Paella</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 7</div>
+            <img src="img/Berenjenas rellenas.jpg" style="width:100%">
+            <div class="text">Berenjenas Rellenas</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 7</div>
+            <img src="img/Pasta con tomate y jamon.jpg" style="width:100%">
+            <div class="text">Pasta con tomate y jamon</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 7</div>
+            <img src="img/chuletas con arroz.jpg" style="width:100%">
+            <div class="text">Chuletas con arroz</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 7</div>
+            <img src="img/salmon.jpg" style="width:100%">
+            <div class="text">Salmon</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">7 / 7</div>
+            <img src="img/Tortilla rellena de jamon y queso.jpg" style="width:100%">
+            <div class="text">Tortilla rellena de jamon y queso</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+          }
+        </script>
+
+      </aside>
+      <section id="articulosprincipales">
+        <article>
+          <h1>Pulpo a feira </h1>
+          <time datetime="2022-11-12" pubdate>
+            <div class="numerodia">12</div>
+            <div class="nombredia">Lunes</div>
+          </time>
+          <p>Pulpo, aceite e pimentón</p>
+          <figure>
+            <img src="Img/pulpo-a-feira-ok.jpg" width="300" height="300">
+          </figure>
+        </article>
+        <article>
+          <h1> Langostinos fritos </h1>
+          <time datetime="2022-12-13" pubdate>
+            <div class="numerodia">13</div>
+            <div class="nombredia">Martes</div>
+          </time>
+          <p>Langostinos</p>
+          <figure>
+            <img src="Img/langostinos-fritos.jpg" width="300" height="300">
+          </figure>
+        </article>
+        <article>
+          <h1>Lasaña</h1>
+          <time datetime="2022-11-14" pubdate>
+            <div class="numerodia">14</div>
+            <div class="nombredia">Miercoles</div>
+          </time>
+          <p>Pasta para lasaña, carne picada, pimiento rojo, pimiento verde,
+            cebolla, tomate, leche, harina, sal y pimienta negra molida</p>
+          <figure>
+            <img src="Img/lasaña-.jpg" width="300" height="300">
+          </figure>
+        </article>
+        <article>
+          <h1>Pechugas Empanadas con Patatas </h1>
+          <time datetime="2022-11-15" pubdate>
+            <div class="numerodia">15</div>
+            <div class="nombredia">Jueves</div>
+          </time>
+          <p>Pechugas, huevos, harina, patatas, sal</p>
+          <figure>
+            <img src="Img/pechuga-empanada.jpg" width="300" height="300">
+          </figure>
+        </article>
+        <article>
+          <h1>Arroz con Calamares</h1>
+          <time datetime="2022-11-16" pubdate>
+            <div class="numerodia">16</div>
+            <div class="nombredia">Viernes</div>
+          </time>
+          <p>Arroz con calamares</p>
+          <figure>
+            <img src="Img/Arroz-con-calamares.jpg" width="300" height="300">
+          </figure>
+        </article>
+        <article>
+          <h1>Churrasco </h1>
+          <time datetime="2022-11-17" pubdate>
+            <div class="numerodia">17</div>
+            <div class="nombredia">Sabado</div>
+          </time>
+          <p>Costillar de Cerdo o Ternera, patatas y criollos</p>
+          <figure>
+            <img src="Img/Churrasco.jpg" width="300" height="300">
+          </figure>
+        </article>
+        <article>
+          <h1>Cocido Gallego</h1>
+          <time datetime="2022-11-18" pubdate>
+            <div class="numerodia">18</div>
+            <div class="nombredia">Domingo</div>
+          </time>
+          <p>Patatas, Verdura, Pollo, Chorizos, Costillas, Carne, Tocino, garbanzos, agua y sal</p>
+          <figure>
+            <img src="Img/cocido-gallego.jpg" width="300" height="300">
+          </figure>
+        </article>
+      </section>
+      <aside id="infoadicional">
+        <h1>Información </h1>
+        <p>Comentario Pulpo</p>
+        <p>Comentario Langostinos</p>
+        <p>Comentario Lasaña</p>
+        <p>Comentario Pechugas Empanadas</p>
+        <p>Comentario Arroz con calamares</p>
+        <p>Comentario Churrasco</p>
+        <p>Comentario Cocido</p>
+      </aside>
+
+      <div class="recuperar"></div>
+    </div>
+  </main>
+  <footer id="pielogo">
+    <div>
+      <section class="seccionpie">
+        <h1>Sitio Web</h1>
+        <p><a href="index.html">Principal</a></p>
+        <p><a href="fotos.html">Fotos</a></p>
+        <p><a href="videos.html">Videos</a></p>
+      </section>
+      <section class="seccionpie">
+        <h1>Axuda</h1>
+        <p><a href="contacto.html">Contacto</a></p>
+      </section>
+      <section class="seccionpie">
+        <address>IES Chan do Monte, Marín</address>
+        <small>&copy; Dereitos reservados 2022</small>
+      </section>
+      <div class="recuperar"></div>
+    </div>
+  </footer>
+</body>
+
+</html>

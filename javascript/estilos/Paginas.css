@@ -1,0 +1,29 @@
+
+        * {
+            font-family: sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10;
+            width: 140px;
+            background-color: gainsboro;
+            border: 5px solid blue;
+        }
+        li a{
+            display: block;
+            text-decoration: none;
+            color:black;
+        }
+        .seleccionado{
+            background-color: lightblue;
+            color: purple;
+        }
+        li a:hover:not(seleccionado){
+            background-color: purple;
+            color: lightgray;
+        }
+    
+          
+        
+        
